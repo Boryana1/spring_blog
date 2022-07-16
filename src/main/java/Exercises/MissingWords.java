@@ -1,4 +1,4 @@
-package JPMorgan;
+package Exercises;
 
 import java.util.ArrayList;
 import java.util.List;
