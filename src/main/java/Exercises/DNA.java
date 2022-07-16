@@ -1,8 +1,4 @@
-package JPMorgan;
-
-import java.sql.Array;
-import java.util.Arrays;
-import java.util.stream.Collectors;
+package Exercises;
 
 public class DNA {
 
