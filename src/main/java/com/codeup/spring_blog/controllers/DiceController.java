@@ -24,8 +24,8 @@ public class DiceController {
         }else{
             message = "That is a wrong number";
         }
-        System.out.println("What did we get? Random number = " + randomNum + ";" + "userNumber = " + number);
         System.out.println("message = " + message);
+        System.out.println("What did we get? Random number = " + randomNum + "; userNumber = " + number);
         model.addAttribute("number", number);
         return "rollDiceView";
     }
