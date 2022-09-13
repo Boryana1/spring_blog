@@ -43,6 +43,9 @@ public class Ad {
         this.description = description;
     }
 
+    public Object getOwner() {
+    }
+
 //    public Object getOwner() {
 //    }
 }
