@@ -24,12 +24,12 @@ public class EmailService {
         msg.setSubject(subject);
         msg.setText(body);
 
-//        try {
-//            this.emailSender.send(msg);
-//        } catch (MailException ex) {
-//            // simply log it and go on...
-//            System.err.println(ex.getMessage());
-//        }
-//    }
+        try {
+            this.emailSender.send(msg);
+        } catch (MailException ex) {
+            // simply log it and go on...
+            System.err.println(ex.getMessage());
+        }
+    }
 }
 
