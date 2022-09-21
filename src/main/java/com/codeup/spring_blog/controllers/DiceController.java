@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 @Controller
 public class DiceController {
 
-    @GetMapping("/roll-dice/")
+    @GetMapping("roll-dice")
     public String diceStart(){
         return "rollDiceView";
     }
 
-    @GetMapping("/roll-dice/{number}")
+    @GetMapping("roll-dice/{number}")
     public String rollDice(@PathVariable int number, Model model) {
         int randomNum = (int)Math.floor(Math.random()*(6-1+1)+1);
 
