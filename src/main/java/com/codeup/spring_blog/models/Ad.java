@@ -16,6 +16,9 @@ public class Ad {
     @Column(nullable = false)
     public String description;
 
+    @Column(nullable = false)
+    public String owner;
+
     public Ad() {
     }
 
@@ -43,9 +46,10 @@ public class Ad {
         this.description = description;
     }
 
-//    public Object getOwner() {
-//    }
+    public Object getOwner() {
+        return owner;
+    }
 
-//    public Object getOwner() {
-//    }
+    public Object getOwner() {
+    }
 }
