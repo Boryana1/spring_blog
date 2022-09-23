@@ -26,7 +26,10 @@ public class DiceController {
         }
         System.out.println("message = " + message);
         System.out.println("What did we get? Random number = " + randomNum + "; userNumber = " + number);
+
         model.addAttribute("number", number);
+        model.addAttribute("message", message);
+        model.addAttribute("randomNum", randomNum);
         return "rollDiceView";
     }
 }
