@@ -10,7 +10,7 @@ public class Post {
     public long id;
 
     @Column(nullable = false)
-    public String authot;
+    public String author;
 
     @Column(nullable = false)
     public String description;
@@ -18,9 +18,9 @@ public class Post {
     public Post() {
     }
 
-    public Post(long id, String authot, String description) {
+    public Post(long id, String author, String description) {
         this.id = id;
-        this.authot = authot;
+        this.author = author;
         this.description = description;
     }
 
@@ -32,12 +32,12 @@ public class Post {
         this.id = id;
     }
 
-    public String getAuthot() {
-        return authot;
+    public String getAuthor() {
+        return author;
     }
 
-    public void setAuthot(String authot) {
-        this.authot = authot;
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
     public String getDescription() {
