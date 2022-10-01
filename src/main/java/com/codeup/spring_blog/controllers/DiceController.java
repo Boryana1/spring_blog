@@ -22,7 +22,7 @@ public class DiceController {
         if(randomNum == number){
             message = "You guessed correctly";
         }else{
-            message = "That is a wrong number";
+            message = "This number is not correct";
         }
         System.out.println("message = " + message);
         System.out.println("What did we get? Random number = " + randomNum + "; userNumber = " + number);
