@@ -1,5 +1,6 @@
 package com.codeup.spring_blog.controllers;
 
+import com.codeup.spring_blog.repositories.PostRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -8,6 +9,13 @@ import java.util.ArrayList;
 
 @Controller
 public class PostController {
+
+    private final PostRepository postDao;
+
+    public PostController(PostRepository postDao) {
+        this.postDao = postDao;
+    }
+
     @GetMapping("/posts")
     public String showPosts(Model model){
         ArrayList<Post> allPosts = new ArrayList<>();
@@ -26,9 +34,9 @@ public class PostController {
     }
 
     @GetMapping("/posts/create")
-    @ResponseBody
-    public String showCreatePost(){
-        return "view the form for creating a post";
+    public String showCreatePost(Model model){
+        model.addAttribute("newPost", new Post())
+        return "posts/create";
     }
 
     @PostMapping("/posts/create")
